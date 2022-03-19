@@ -12,7 +12,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private String difficulty;
-    private String difficultly;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,18 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void addButtonClicked(View view){
-        System.out.println("Hello");
+        button = (Button) findViewById(R.id.additionbutton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openAnswer();
+            }
+        });
+    }
+
+    public void openAnswer() {
+        Intent i = new Intent(this, Answer.class);
+        startActivity(i);
     }
 
     public void subtractButtonClicked(View view){

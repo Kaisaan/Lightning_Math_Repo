@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:onClick="addButtonClicked"
     tools:context=".MainActivity">
 
     <Switch
@@ -25,6 +24,7 @@
         android:layout_width="251dp"
         android:layout_height="wrap_content"
         android:text="Lightning Math"
+        android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
@@ -69,7 +69,6 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/subtractionbutton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/additionbutton" />
 
@@ -105,12 +104,13 @@
         android:id="@+id/textView7"
         android:layout_width="380dp"
         android:layout_height="30dp"
+        android:layout_marginTop="4dp"
         android:text="Division"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divisionbutton" />
 
@@ -123,9 +123,11 @@
         android:onClick="subtractButtonClicked"
         android:text="PLAY"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.271" />
 
     <Button
         android:id="@+id/multiplicationbutton"
