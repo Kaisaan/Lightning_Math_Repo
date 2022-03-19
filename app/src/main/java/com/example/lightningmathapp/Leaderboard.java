@@ -8,19 +8,18 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-
-public class Answer extends AppCompatActivity {
+public class Leaderboard extends AppCompatActivity {
 
     private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.answer_screen);
+        setContentView(R.layout.leaderboard);
     }
 
-    public void submitAnswer(View view){
-        button = (Button) findViewById(R.id.submitButton);
+    public void goHome(View view){
+        button = (Button) findViewById(R.id.homeButton);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,10 +29,9 @@ public class Answer extends AppCompatActivity {
     }
 
     public void openQuestion() {
-        Intent i = new Intent(this, Leaderboard.class);
+        Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
     }
-
 }
 
 

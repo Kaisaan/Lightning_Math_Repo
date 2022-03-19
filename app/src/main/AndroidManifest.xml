@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Answer"></activity>
+        <activity android:name=".Leaderboard"></activity>
     </application>
 
 </manifest>

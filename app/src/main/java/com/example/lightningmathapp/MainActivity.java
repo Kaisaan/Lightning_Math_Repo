@@ -26,12 +26,12 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openAnswer();
+                openQuestion();
             }
         });
     }
 
-    public void openAnswer() {
+    public void openQuestion() {
         Intent i = new Intent(this, Answer.class);
         startActivity(i);
     }
