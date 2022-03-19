@@ -3,6 +3,7 @@ package com.example.lightningmathapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private String difficulty;
+    private String difficultly;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,23 +37,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint("SetTextI18n")
     public void difficultyButtonOnClick(View view){
 
         Button b = (Button)view;
         String bText = b.getText().toString();
-        if (bText.equals("EASY")){
-            String difficultly = "Easy";
+        switch (bText) {
+            case "EASY":
+                this.difficulty = "Easy";
+                break;
+            case "MEDIUM":
+                this.difficulty = "Medium";
+                break;
+            case "HARD":
+                this.difficulty = "Hard";
+                break;
         }
-        else if (bText.equals("MEDIUM")){
-            String difficulty = "Medium";
-
-        }
-        else if (bText.equals("HARD")){
-            String difficulty = "Hard";
-
-        }
-        ((TextView) findViewById(R.id.difficultyLabel)).setText("Difficulty:" + difficulty);
-    }
+        ((TextView) findViewById(R.id.difficultyLabel)).setText("Difficulty selected: " + difficulty);
+           }
 
     public void MediumDifficulty(View view){
     }
